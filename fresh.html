@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <h1>Program 4 --> Sum of two numbers</h1>
+    
+</head>
+<body>
+    <script>
+        function sum(num1,num2){
+            if(isNaN(num1) || isNan(num2)){
+            alert("enter a valid postive number" );
+            }
+            else{
+        document.write(`The sum of two numbers ${num1} and ${num2} is ${num1+num2}`)  
+            }
+    };    
+    let a=()=>{
+return(parseInt(prompt("enter the  numner")));
+}
+        // let num1=parseInt(prompt("Enter the first number"));
+    
+    let check=true;
+    alert("Please Give a number ");
+    let b=a();
+    while(check){
+    if(isFinite(b)==false){
+        b=a();
+    }
+    else{
+        check=false
+    }
+    }
+
+let check1=true;
+  alert("Please Give a number ");
+  var c=a();
+  while(check1){
+   if(isFinite(c)==false){
+    c=a();
+   }
+   else{
+    check1=false
+   }
+}
+      
+//    let num2=parseInt(prompt("Enter the second number"));
+
+        sum(b,c);
+
+    </script>
+    
+</body>
+</html>
+

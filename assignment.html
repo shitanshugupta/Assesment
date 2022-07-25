@@ -1,0 +1,562 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>Program 1--> factorial of a number</h1>
+    <title>Page Title</title>
+</head>
+<body>
+    <script>
+
+        function fact(num){
+        if(isNaN(num)){
+            alert("enter a valid postive number" );
+        }
+        else if(num<0){
+            alert("the number must be greater than 0");
+        }
+        else if(!Number.isInteger(num)){
+            alert("the number must be valid integer")
+        }
+        else    {
+        let fact=1;
+        for(let i=1;i<=num;i++){
+            fact*=i
+        }
+        document.write(`The factrial of a number ${num} is ${fact}`);
+    }
+    };
+    var num=parseInt(prompt("enter the number to find factorial"))
+    fact(num);
+
+    </script>
+    
+
+</body>
+</html>
+----------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <h1>Program 2 --> fibonacci Series</h1>
+    
+</head>
+<body>
+    <script>
+       
+        let a=0;
+        let b=1;
+        function fibonacci(times){
+            if(isNaN(times)){
+            alert("enter a valid postive number" );
+        }
+        else if(times==0||times==1){
+            alert("the length of series must be atleast greater than 2");
+        }
+        else if(times<0){
+            alert("the length must be greater than equal to  2");
+        }
+        else if(!Number.isInteger(times)){
+            alert("length must be integer value")
+        }
+        else { 
+            document.write(`The fibonacci series of length ${times} is `)
+            document.write(a+","+b);
+            for(let i=3;i<=times;i++){
+                let c=a+b;
+                document.write(","+c);
+                a=b;
+                b=c;
+            }
+        }
+        };
+        let times=parseInt(prompt("Enter length of fibonacci series"));
+        fibonacci(times);
+
+    </script>
+    
+</body>
+</html>
+
+----------------------------------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <h1>Program 3 --> Prime Numbers</h1>
+    
+</head>
+<body>
+    <script>
+        function prime(num){
+            if(isNaN(num)){
+            alert("enter a valid postive number" );
+            }
+            else if(num<0){
+                alert("the number must be greater than 1");
+            }
+            else if(num==1|| num==0){
+                alert(`${num} is not a prime number`);
+            }
+            else if(!Number.isInteger(times)){
+                alert("length must be integer value")
+        }
+            else{
+            let c=0;
+            for(let i=1;i<=num;i++){
+                if(num%i==0){
+                    c+=1;
+                }
+            }
+            c==2 ? document.write(`The number ${num} is prime `) : document.write(`The number ${num} is not prime `)
+            }
+        };
+       
+        let num=parseInt(prompt("Enter the number to check prime or not"));
+        prime(num);
+
+    </script>
+    
+</body>
+</html>
+----------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <h1>Program 4 --> Sum of two numbers</h1>
+    
+</head>
+<body>
+    <script>
+        function sum(num1, num2){
+            return num1 + num2;
+        }
+        let flag;
+        do{
+            flag=0;
+            let num1=parseFloat(prompt('Enter first number :  '));
+            if(isNaN(num1)){
+                alert("Please enter valid number.....");
+                flag++;
+                continue;
+            }
+            let num2=parseFloat(prompt('Enter second number : '));
+            if(isNaN(num2)){
+                alert("Please enter valid number.....");
+                flag++;
+                continue;
+            } else{
+                alert(sum(num1, num2));
+            }
+        }while(flag!=0);
+
+    </script>
+    
+</body>
+</html>
+
+
+----------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <h1>Program 5 --> Multiplication of two numbers</h1>
+    
+</head>
+<body>
+    <script>
+        function sum(num1, num2){
+            return num1 * num2;
+        }
+        let flag1;
+        do{
+            flag1=0;
+            let num1=parseFloat(prompt('Enter first number :  '));
+            if(isNaN(num1)){
+                alert("Please enter valid number.....");
+                flag1++;
+                continue;
+            }
+            let num2=parseFloat(prompt('Enter second number : '));
+            if(isNaN(num2)){
+                alert("Please enter valid number.....");
+                flag1++;
+                continue;
+            } else{
+                alert(sum(num1, num2));
+            }
+        }while(flag1!=0);
+
+    </script>
+    
+</body>
+</html>
+
+----------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <h1>Program 6 --> Find Largest in an array</h1>
+    
+</head>
+<body>
+    <script>
+        function largest(Ar,n){
+            let lar=Ar[0]
+            
+          for(let i=1;i<n;i++){
+            if(Ar[i]>lar){
+                lar=Ar[i]
+            }
+          }
+            document.write(`The largest element in an array is ${lar} `)
+        };    
+        let n=prompt("enter the number of elements in array");
+        let Ar=[]
+        for(let i=0;i<n;i++){
+            Ar[i]=parseInt(prompt("enter the elements"));
+        }
+       
+    largest(Ar,n)
+    </script>
+    
+</body>
+</html>
+
+-------------------------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <h1>Program 7 --> Find Smallest Number in an array</h1>
+    
+</head>
+<body>
+    <script>
+        function largest(Ar1,n1){
+            let small=Ar1[0]
+            
+          for(let i=1;i<n1;i++){
+            if(Ar1[i]<small){
+                small=Ar1[i]
+            }
+          }
+            document.write(`The smallest element in an array is ${small} `)
+        };    
+        let n1=prompt("enter the number of elements in array");
+        let Ar1=[]
+        for(let i=0;i<n1;i++){
+            Ar[i]=parseInt(prompt("enter the elements"));
+        }
+       
+    largest(Ar1,n)
+    </script>
+    
+</body>
+</html>
+
+-------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <h1>Program 8 --> Search Number in an array</h1>
+    
+</head>
+<body>
+    <script>
+        function largest(Ar,n,s){
+            
+            let flag=0;
+            for(let i=0;i<n;i++){
+                if(Ar[i]==s){
+                
+                   flag+=1  
+                }            
+            } 
+            flag==1 ?  document.write("True") : document.write("False") 
+   
+        };    
+        let num=prompt("enter the number of elements in array");
+        let ar=[]
+        for(let i=0;i<n;i++){
+            Ar[i]=prompt("enter the elements")
+        }
+        let s=prompt("enter the number to find in array");
+        largest(ar,num,s);
+    </script>
+    
+</body>
+</html>
+
+---------------------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <h1>Program 9 -->Reverse array of string</h1>
+    
+</head>
+<body>
+    <script>
+        function reverse(Ar,n){
+            let i=0;
+
+            while(i<=n-1){
+                temp=Ar[i];
+                Ar[i]=Ar[n-1]
+                Ar[n-1]=temp;
+                i+=1;
+                n-=1;
+            } 
+            document.write(Ar);
+
+        };    
+        let num=prompt("enter the number of strings in array");
+        let arr=[]
+        for(let i=0;i<n;i++){
+            Ar[i]=prompt("enter the string")
+        }
+        reverse(Ar,n);
+    </script>
+    
+</body>
+</html>
+
+-------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <h1>Program 10 -->length of string</h1>
+    
+</head>
+<body>
+    <script>
+        function stringlength(str){
+    if(str==undefined||str==''||str==null) return 0;
+    let res =0;
+    let i=0;
+    while(str[i]!==undefined) {res++;i++};
+    return res;
+}
+console.log(stringlength('hello'))
+let ab = null
+console.log(stringlength(a));
+a = undefined
+console.log(stringlength(a));
+    </script>
+    
+</body>
+</html>
+
+-------------------------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <h1>Program 11 -->length of array</h1>
+    
+</head>
+<body>
+    <script>
+        function lengt(){
+        let array = [1, 5, 6, true, "string", ["subarray", 5], 6];
+        let length = 0;
+        for (let i in  array){
+	        length++;
+        }
+        alert(length)
+        };
+        lengt();    
+    </script>
+    
+</body>
+</html>
+
+
+----------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <h1>Program 12 area of a triangle</h1>
+    
+</head>
+<body>
+    <script>
+        function area(side1,side2,side3){
+            if(side1<=0||side2<=0||side3<=0){
+                document.write("Triangle does not exist");
+            }
+            else if(side1+side2>side3 ||side2+side3>side1 ||side1+side3>side2 ){
+            const s = (side1 + side2 + side3) / 2;
+            
+            const areaValue = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+            document.write(`The area of the triangle is ${areaValue}`);
+            }
+            
+            else if(isNaN(side1)||isNaN(side2)||isNaN(side3)){
+                alert("sides length can not be string")
+            }
+        };
+        const side1 = parseInt(prompt('Enter side1: '));
+        const side2 = parseInt(prompt('Enter side2: '));
+        const side3 = parseInt(prompt('Enter side3: '));
+
+        area(side1,side2,side3);
+
+</script>
+    
+</body>
+</html> -->
+
+
+----------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <h1>Program 13 --> Prime Numbers in the range</h1>
+    
+</head>
+<body>
+    <script>
+        function prime(num){
+            if(isNaN(num)){
+            alert("enter a valid postive number" );
+            }
+            else if(num<0){
+                alert("the number must be greater than 1");
+            }
+            else if(num==1|| num==0){
+                alert(`${num} is not a prime number`);
+            }
+            else if(!Number.isInteger(num)){
+                alert("length must be integer value")
+        }
+        else{
+            for(let j=2;j<=num;j++){
+            let c=0;
+            for(let i=1;i<=j;i++){
+                if(j%i==0){
+                    c+=1;
+                }
+            }
+            if(c==2&&j!=num){
+                document.write(j+",");
+            }
+            else if(c==2 && j==num){
+                document.write(j);
+            }
+        }
+        }
+        };
+       
+        let num=parseInt(prompt("Enter to find the prime number till the given number "));
+        prime(num);
+
+
+    </script>
+    
+</body>
+</html>
+
+-------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <h1>Program 14 --> Square root of a given number</h1>
+    
+</head>
+<body>
+    <script>
+        function root(num){
+            document.write(Math.sqrt(num));
+        };
+       
+        let num=parseInt(prompt("Enter the number to find square root "));
+        root(num);
+
+
+    </script>
+    
+</body>
+</html>
+
+
+-------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <h1>Program 15 --> sorting of array element</h1>
+    
+</head>
+<body>
+    <script>
+        function sort(ar){
+            document.write("array before sorting"+"<br>"+ar);
+            for(let i=0;i<ar.length-1;i++){
+                for(let j=0;j<ar.length-1-i;j++){
+                    if(ar[j]>ar[j+1]){
+                        temp=ar[j]
+                        ar[j]=ar[j+1]
+                        ar[j+1]=temp
+                    }
+                }
+            }
+            
+            return("<br>"+"array after sorting"+"<br>"+ar);
+        };
+       
+        let z=parseInt(prompt("enter the number of elements in array"));
+        ar=[]
+        for(let i=0;i<z;i++){
+            ar[i]=parseInt(prompt(`enter the ${i+1} element`))
+        }
+        document.write(sort(ar));
+
+
+    </script>
+    
+</body>
+</html>
+
+
